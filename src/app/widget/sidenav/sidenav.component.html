@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="sidebar" [ngClass]="{ 'close': isSidebarClosed }">
+    <div class="logo-details">
+      <i class='bx bx-menu' (click)="toggleSidebar()"></i>
+      <span class="logo_name">Admin</span>
+    </div>
+    <ul class="nav-links">
+      <li *ngFor="let item of sidebarData">
+        <div class="icon-link" (click)="toggleSubMenu(item)">
+          <a (click)="item.action ? item.action() : null">
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{ item.name }}</span>
+          </a>
+          <i *ngIf="item.submenu" class='bx bxs-chevron-down arrow' [ngClass]="{ 'rotate': isSubmenuActive(item) }"></i>
+        </div>
+        <ul class="sub-menu" *ngIf="item.submenu" [ngClass]="{ 'showMenu': isSubmenuActive(item) }">
+          <li *ngFor="let subItem of item.submenu">
+            <a (click)="subItem.action ? subItem.action() : null">{{ subItem.name }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-section" [ngClass]="{ 'sidebar-closed': isSidebarClosed }">
+    <div class="home-content">
+      <app-dashboard></app-dashboard>
+  </div>
+  </section>
+</div>

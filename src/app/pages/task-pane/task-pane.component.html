@@ -1,0 +1,63 @@
+<div class="task-manager">
+  <div class="page-content">
+    <div class="header">Today Tasks</div>
+    <div class="content-categories">
+      <div class="label-wrapper" *ngFor="let category of categories">
+        <input class="nav-item" name="nav" type="radio" [id]="category.id" [value]="category.value">
+        <label class="category" [for]="category.id">{{ category.name }}</label>
+      </div>
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="m-l-172">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="addCategory()">Add</button>
+        <button mat-menu-item (click)="editCategory()">Edit</button>
+        <button mat-menu-item (click)="deleteCategory()">Delete</button>
+      </mat-menu>
+    </div>
+
+    <div class="tasks-wrapper">
+      <div class="task" *ngFor="let task of todayTasks">
+        <input class="task-item" name="task" type="checkbox" id="item-{{task.id}}" [checked]="task.status === 'approved'">
+        <label for="item-{{task.id}}">
+          <span class="label-text">{{task.name}}</span>
+        </label>
+        <span class="tag {{task.status}}">{{task.status | titlecase}}</span>
+      </div>
+      <div class="header upcoming">Upcoming Tasks</div>
+      <div class="task" *ngFor="let task of upcomingTasks">
+        <input class="task-item" name="task" type="checkbox" id="item-{{task.id}}">
+        <label for="item-{{task.id}}">
+          <span class="label-text">{{task.name}}</span>
+        </label>
+        <span class="tag {{task.status}}">{{task.status | titlecase}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-bar">
+    <div class="top-part">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-users">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+      <div class="count">{{todayTasks.length}}</div>
+    </div>
+    <div class="header">Schedule</div>
+    <div class="right-content">
+      <div *ngFor="let task of tasks" class="task-box {{ task.color }}">
+        <div class="description-task">
+          <div class="time">{{ task.time }}</div>
+          <div class="task-name">{{ task.name }}</div>
+        </div>
+        <div class="more-button"></div>
+        <div class="members">
+          <img *ngFor="let member of task.members" [src]="member" alt="member">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
