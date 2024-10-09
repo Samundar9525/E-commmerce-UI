@@ -16,6 +16,13 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChartPanelComponent } from './pages/chart-panel/chart-panel.component';
 import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { TablesComponent } from './widget/tables/tables.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,8 @@ import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashbo
     LinechartComponent,
     DashboardComponent,
     ChartPanelComponent,
-    SellerDashboardComponent
+    SellerDashboardComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,12 @@ import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashbo
     MatRadioModule,
     MatIconModule,
     BrowserAnimationsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    MatTableModule,
+    MatSortModule,
+    MatButtonModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
