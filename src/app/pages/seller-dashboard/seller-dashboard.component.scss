@@ -1,0 +1,16 @@
+.dashboard-container {
+  .card{
+   padding: 20px 30px;
+   width: 420px;
+  }
+ }
+
+ @media (max-width: 768px) {
+   .dashboard-container {
+     .card{
+      padding: 10px 15px !important;
+      width: 250px !important;
+     }
+    }
+
+ }

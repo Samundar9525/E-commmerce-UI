@@ -1,6 +1,6 @@
 <div class="dashboard-container">
   <div class="flex">
-    <div class="card" *ngFor="let card of statCards">
+    <div class="card" *ngFor="let card of sellerCards">
       <app-cards
         [iconClass]="card.iconClass"
         [label]="card.label"
@@ -12,9 +12,4 @@
       </app-cards>
   </div>
 </div>
-
-  <div class="chart-taskpane flex">
-    <div><app-task-pane></app-task-pane></div>
-    <div><app-chart-panel></app-chart-panel></div>
-  </div>
 </div>

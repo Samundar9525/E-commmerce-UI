@@ -100,3 +100,35 @@ export const lineChartSeries: ApexAxisChartSeries = [
 export const lineChartCategories: string[] = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
+
+
+
+export const sellerCardData = [
+  {
+    iconClass: 'fas fa-dollar-sign',
+    label: 'Revenue',
+    value: '250000 ₹',
+    changeType: 'up',
+    changeValue: '5.35%',
+    sinceText: 'Since last month',
+    cardColor: '#fe4d46', // Red
+  },
+  {
+    iconClass: 'fa fa-shopping-cart',
+    label: 'Orders',
+    value: '2,200',
+    changeType: 'up',
+    changeValue: '8.66%',
+    sinceText: 'Since last month',
+    cardColor: '#623ce8', // Blue
+  },
+  {
+    iconClass: 'fas fa-dollar-sign',
+    label: 'Returned',
+    value: '199,099 ₹',
+    changeType: 'up',
+    changeValue: '5.35%',
+    sinceText: 'Since last month',
+    cardColor: '#fe4d46', // Red
+  },
+]

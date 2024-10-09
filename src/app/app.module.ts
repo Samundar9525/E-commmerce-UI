@@ -15,6 +15,7 @@ import { LinechartComponent } from './widget/linechart/linechart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChartPanelComponent } from './pages/chart-panel/chart-panel.component';
+import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChartPanelComponent } from './pages/chart-panel/chart-panel.component';
     PiechartComponent,
     LinechartComponent,
     DashboardComponent,
-    ChartPanelComponent
+    ChartPanelComponent,
+    SellerDashboardComponent
   ],
   imports: [
     BrowserModule,
