@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { sellerCardData } from 'src/app/sampleData';
+import { productColumn, productRowData, sellerCardData } from 'src/app/sampleData';
 
 @Component({
   selector: 'app-seller-dashboard',
@@ -8,5 +8,7 @@ import { sellerCardData } from 'src/app/sampleData';
 })
 export class SellerDashboardComponent {
 sellerCards: any = sellerCardData;
+tableColumn: any[] = productColumn;
+tableData: any[] = productRowData;
 
 }

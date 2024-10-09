@@ -8,8 +8,15 @@
         [changeType]="card.changeType"
         [changeValue]="card.changeValue"
         [sinceText]="card.sinceText"
-        [cardColor]="card.cardColor">
+        [cardColor]="card.cardColor"
+      >
       </app-cards>
+    </div>
   </div>
-</div>
+
+  <div class="table-container">
+    <app-tables
+    [tableColumns]="tableColumn" [tableData]="tableData"
+    ></app-tables>
+  </div>
 </div>
