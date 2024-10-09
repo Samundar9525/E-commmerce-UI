@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { statCards } from 'src/app/sampleData';
+import { statCards, tableColumn, tableRowData } from 'src/app/sampleData';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,5 +8,7 @@ import { statCards } from 'src/app/sampleData';
 })
 export class DashboardComponent {
 statCards: any = statCards;
+tableColumn: any[] = tableColumn;
+tableData: any[] = tableRowData;
 
 }
