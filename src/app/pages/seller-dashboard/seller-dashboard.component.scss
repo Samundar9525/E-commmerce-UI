@@ -1,0 +1,70 @@
+.dashboard-container {
+  .card{
+   padding: 20px 30px;
+   width: 420px;
+  }
+ }
+
+ @media (max-width: 768px) {
+   .dashboard-container {
+     .card{
+      padding: 10px 15px !important;
+      width: 250px !important;
+     }
+    }
+
+ }
+ .button-panel {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  cursor: pointer;
+  width: 32%; /* Ensures all buttons have the same width */
+  height:3rem;
+  text-transform: uppercase; /* Make the text uppercase for a modern look */
+  mat-icon{
+    font-size: 1.2rem !important;
+  }
+}
+
+.card-button mat-icon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card-button:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up the button on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increase shadow intensity */
+  border-color: var(--c-action-primary); /* Change border color to primary */
+}
+
+.card-button:active {
+  transform: translateY(0); /* Reset transform on click */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+}
+
+.table-container{
+  padding: 0% 3%;
+  app-tables {
+    ::ng-deep .mat-mdc-header-row{
+      background-color: #244855;
+      color: white;
+    }
+  }
+}

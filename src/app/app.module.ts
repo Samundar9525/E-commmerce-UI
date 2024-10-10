@@ -15,13 +15,17 @@ import { LinechartComponent } from './widget/linechart/linechart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChartPanelComponent } from './pages/chart-panel/chart-panel.component';
+import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TablesComponent } from './widget/tables/tables.component';
+import { ModelsComponent } from './widget/models/models.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { TablesComponent } from './widget/tables/tables.component';
     LinechartComponent,
     DashboardComponent,
     ChartPanelComponent,
-    TablesComponent
+    SellerDashboardComponent,
+    TablesComponent,
+    ModelsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,10 @@ import { TablesComponent } from './widget/tables/tables.component';
     MatSortModule,
     MatButtonModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTooltipModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

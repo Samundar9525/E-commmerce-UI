@@ -103,6 +103,35 @@ export const lineChartCategories: string[] = [
 
 
 
+export const sellerCardData = [
+  {
+    iconClass: 'fas fa-dollar-sign',
+    label: 'Revenue',
+    value: '250000 ₹',
+    changeType: 'up',
+    changeValue: '5.35%',
+    sinceText: 'Since last month',
+    cardColor: '#fe4d46', // Red
+  },
+  {
+    iconClass: 'fa fa-shopping-cart',
+    label: 'Orders',
+    value: '2,200',
+    changeType: 'up',
+    changeValue: '8.66%',
+    sinceText: 'Since last month',
+    cardColor: '#623ce8', // Blue
+  },
+  {
+    iconClass: 'fas fa-dollar-sign',
+    label: 'Returned',
+    value: '199,099 ₹',
+    changeType: 'up',
+    changeValue: '5.35%',
+    sinceText: 'Since last month',
+    cardColor: '#fe4d46', // Red
+  },
+]
 
 
 export const tableRowData = [
@@ -132,6 +161,73 @@ export const tableColumn = [
     columnDef: 'status',
     header: 'Status',
     cell: (element: any) => `${element.status}`,
+  },
+  {
+    columnDef: 'actions',
+    header: 'Actions',
+    cell: (element: any) => `
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+      </button>
+    `,
+  },
+];
+
+
+export const productRowData = [
+  { id: 1, name: 'Iphone 19', rate: 2800, discount: 20, sold: 15, inStock: 3500, returned: 2, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 2, name: 'Samsung Galaxy S21', rate: 2400, discount: 15, sold: 20, inStock: 2500, returned: 1, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 3, name: 'Google Pixel 6', rate: 2200, discount: 10, sold: 10, inStock: 3000, returned: 3, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 4, name: 'OnePlus 9', rate: 2100, discount: 12, sold: 18, inStock: 4000, returned: 4, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 5, name: 'Sony Xperia 5', rate: 2000, discount: 18, sold: 25, inStock: 3200, returned: 2, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 6, name: 'Xiaomi Mi 11', rate: 1900, discount: 14, sold: 22, inStock: 2800, returned: 5, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 7, name: 'Oppo Find X3', rate: 1800, discount: 16, sold: 14, inStock: 2700, returned: 1, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 8, name: 'Vivo X60', rate: 1750, discount: 13, sold: 12, inStock: 2900, returned: 3, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 9, name: 'Nokia 9', rate: 1650, discount: 11, sold: 19, inStock: 3100, returned: 2, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+  { id: 10, name: 'Realme GT', rate: 1700, discount: 15, sold: 23, inStock: 2600, returned: 4, image: 'https://alphabet.nyc3.cdn.digitaloceanspaces.com/microtechcloud/lz1v0nekbywurabj.webp' },
+];
+
+
+export const productColumn = [
+  {
+    columnDef: 'id',
+    header: 'Product Id',
+    cell: (element: any) => `${element.id}`,
+  },
+  {
+    columnDef: 'name',
+    header: 'Product Name',
+    cell: (element: any) => `${element.name ? element.name:'No data'}`,
+  },
+  {
+    columnDef: 'rate',
+    header: 'Rate',
+    cell: (element: any) => `${element.rate ? element.rate:'No data'}`,
+  },
+  {
+    columnDef: 'discount',
+    header: 'Discount',
+    cell: (element: any) => `${element.discount ? element.discount:'No data'}`,
+  },
+  {
+    columnDef: 'inStock',
+    header: 'Stock (Units)',
+    cell: (element: any) => `${element.inStock?element.inStock:'No data'}`,
+  },
+  {
+    columnDef: 'sold',
+    header: 'Sold (Units)',
+    cell: (element: any) => `${element.sold?element.sold:'No data'}`,
+  },
+  {
+    columnDef: 'returned',
+    header: 'Returned (Units)',
+    cell: (element: any) => `${element.returned?element.returned:'No data'}`,
+  },
+  {
+    columnDef: 'image',
+    header: 'Image',
+    cell: (element: any) => `${element.image ? element.image : 'No Image'}`, // Assume 'image' is a property
   },
   {
     columnDef: 'actions',

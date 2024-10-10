@@ -1,0 +1,27 @@
+<div class="dashboard-container">
+  <div class="flex">
+    <div class="card" *ngFor="let card of sellerCards">
+      <app-cards
+        [iconClass]="card.iconClass"
+        [label]="card.label"
+        [value]="card.value"
+        [changeType]="card.changeType"
+        [changeValue]="card.changeValue"
+        [sinceText]="card.sinceText"
+        [cardColor]="card.cardColor"
+      >
+      </app-cards>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <div class="button-panel">
+      <button mat-button (click)="openDialog()" class="card-button"><mat-icon>add</mat-icon> Add Product</button>
+      <button mat-button (click)="openDialog()" class="card-button"><mat-icon>edit</mat-icon>Mange Product</button>
+      <button mat-button (click)="openDialog()" class="card-button"> <mat-icon>delete</mat-icon>Delete Product</button>
+    </div>
+    <app-tables
+    [tableColumns]="tableColumn" [tableData]="tableData"
+    ></app-tables>
+  </div>
+</div>

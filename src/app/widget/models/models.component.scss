@@ -1,0 +1,221 @@
+/* product-dialog.component.css */
+
+/* Title styling */
+.dialog-title {
+  background-color: #3f51b5; /* Darker blue background */
+  color: #fff; /* White text color */
+  padding: 16px;
+  margin: 0; /* Remove default margin */
+}
+
+/* Form container */
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 16px; /* Space between fields */
+}
+
+/* Individual field styling */
+.form-field {
+  width: 100%; /* Full width for fields */
+  mat-form-field{
+    width: 100%;
+  }
+}
+
+/* Button alignment */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Button styling */
+.cancel-button {
+  background-color: #000; /* Black color for cancel button */
+  color: #fff; /* White text color */
+  margin-right: 8px; /* Space between buttons */
+}
+
+.cancel-button:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+.submit-button {
+  background-color: #3f51b5; /* Blue color for submit button */
+  color: #fff; /* White text color */
+}
+
+.submit-button:hover {
+  background-color: #303f9f; /* Darker blue on hover */
+}
+
+/* Make input fields look better */
+input.mat-input-element {
+  border-radius: 4px; /* Rounded corners */
+  transition: all 0.3s ease; /* Transition for effects */
+}
+
+input.mat-input-element:focus {
+  border-color: #3f51b5; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.5); /* Focus shadow */
+}
+
+/* product-dialog.component.css */
+
+/* Existing styles remain unchanged */
+
+/* Thumbnail preview styles */
+.image-preview {
+  margin-top: 10px; /* Space above the preview */
+  display: flex; /* Align center */
+  justify-content: center; /* Center align */
+}
+
+.thumbnail-preview {
+  width: 100px; /* Width of the thumbnail */
+  height: 100px; /* Height of the thumbnail */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded corners */
+  border: 1px solid #ccc; /* Optional: Border around thumbnail */
+}
+
+
+.modal {
+	width: 90%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	background-color: #FFF;
+	border-radius: .5rem;
+	box-shadow: 0 5px 15px rgba(#000, .2);
+}
+
+.modal-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1.5rem 1.5rem 1rem;
+}
+
+.logo-circle {
+	width: 3.5rem;
+	height: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--c-action-primary-accent);
+	svg {
+		max-width: 1.5rem;
+	}
+}
+
+.btn-close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: .25rem;
+	border: none;
+	background-color: transparent;
+	&:hover, &:focus {
+		background-color: var(--c-action-primary-accent);
+	}
+}
+
+.modal-body {
+  width: 190%;
+	padding: 1rem 1.5rem;
+  font-family: "Inter", sans-serif;
+	color: #0d0f21;
+	background-color:  #d0d1de;
+	line-height: 1.5;
+}
+
+.modal-title {
+	font-weight: 700;
+}
+
+.modal-description {
+	color: var(--c-text-secondary);
+}
+
+.upload-area {
+	margin-top: 1.25rem;
+	border: none;
+	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23ccc' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	background-color: transparent;
+	padding: 3rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&:hover, &:focus {
+			background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232e44ff' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	}
+}
+
+.upload-area-icon {
+	display: block;
+	width: 2.25rem;
+	height: 2.25rem;
+	svg {
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+.upload-area-title {
+	margin-top: 1rem;
+	display: block;
+	font-weight: 700;
+		color: var(--c-text-primary);
+}
+
+.upload-area-description {
+		display: block;
+		color: var(--c-text-secondary);
+	strong {
+		color: var(--c-action-primary);
+		font-weight: 700;
+	}
+}
+
+.modal-footer {
+	padding: 1rem 1.5rem 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	[class*="btn-"] {
+		margin-left: .75rem;
+	}
+}
+
+.btn-secondary, .btn-primary {
+	padding: .5rem 1rem;
+	font-weight: 500;
+	border: 2px solid var(--c-action-secondary);
+	border-radius: .25rem;
+	background-color: transparent;
+}
+
+.btn-primary {
+	color: #FFF;
+	background-color: var(--c-action-primary);
+	border-color: var(--c-action-primary);
+}
+
+.image-preview {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: 200px;
+  border: 2px solid var(--c-action-primary);
+  border-radius: 5px;
+}

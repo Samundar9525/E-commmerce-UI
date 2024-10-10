@@ -22,6 +22,17 @@
               <span *ngIf="element.status === 'Inactive'" class="status-badge status-inactive">Inactive</span>
             </ng-container>
 
+            <!-- Image with Hover Tooltip -->
+            <ng-container *ngSwitchCase="'image'">
+              <img
+                matTooltip
+                matTooltipClass="image-tooltip"
+                [src]="element.image"
+                alt="{{element.name}}"
+                class="small-thumbnail"
+                matTooltipPosition="above">
+            </ng-container>
+
             <!-- Actions Column with More Icon -->
             <ng-container *ngSwitchCase="'actions'">
               <button mat-icon-button [matMenuTriggerFor]="menu">
