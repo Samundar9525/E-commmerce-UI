@@ -15,6 +15,11 @@
   </div>
 
   <div class="table-container">
+    <div class="button-panel">
+      <button mat-button (click)="openDialog()" class="card-button"><mat-icon>add</mat-icon> Add Product</button>
+      <button mat-button (click)="openDialog()" class="card-button"><mat-icon>edit</mat-icon>Mange Product</button>
+      <button mat-button (click)="openDialog()" class="card-button"> <mat-icon>delete</mat-icon>Delete Product</button>
+    </div>
     <app-tables
     [tableColumns]="tableColumn" [tableData]="tableData"
     ></app-tables>

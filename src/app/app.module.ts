@@ -23,6 +23,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TablesComponent } from './widget/tables/tables.component';
+import { ModelsComponent } from './widget/models/models.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { TablesComponent } from './widget/tables/tables.component';
     DashboardComponent,
     ChartPanelComponent,
     SellerDashboardComponent,
-    TablesComponent
+    TablesComponent,
+    ModelsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { TablesComponent } from './widget/tables/tables.component';
     MatButtonModule,
     MatInputModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
