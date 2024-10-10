@@ -100,3 +100,46 @@ export const lineChartSeries: ApexAxisChartSeries = [
 export const lineChartCategories: string[] = [
   'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 ];
+
+
+
+
+
+export const tableRowData = [
+  { id: 1, name: 'John Doe', age: 28, status: 'Active' },
+  { id: 2, name: 'Jane Smith', age: 25, status: 'Inactive' },
+  { id: 3, name: 'Tom Johnson', age: 35, status: 'Active' },
+  { id: 4, name: 'Lucy Brown', age: 30, status: 'Active' }
+];
+
+export const tableColumn = [
+  {
+    columnDef: 'id',
+    header: 'ID',
+    cell: (element: any) => `${element.id}`,
+  },
+  {
+    columnDef: 'name',
+    header: 'Name',
+    cell: (element: any) => `${element.name}`,
+  },
+  {
+    columnDef: 'age',
+    header: 'Age',
+    cell: (element: any) => `${element.age}`,
+  },
+  {
+    columnDef: 'status',
+    header: 'Status',
+    cell: (element: any) => `${element.status}`,
+  },
+  {
+    columnDef: 'actions',
+    header: 'Actions',
+    cell: (element: any) => `
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+      </button>
+    `,
+  },
+];

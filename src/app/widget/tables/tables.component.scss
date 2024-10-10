@@ -1,0 +1,57 @@
+
+.ops-table {
+  width: 100%;
+  overflow: auto;
+}
+
+.ops-table table {
+  width: 100%;
+}
+
+.ops-table-header {
+  display: flex;
+  background: #ffff;
+  align-items: center;
+  width: 100%;
+}
+
+.ops-search-frame {
+  mat-form-field {
+    width: 97%;
+    padding: 2%;
+  }
+  width: 100%;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 16px;
+  text-align: left;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.status-active {
+  background-color: #1e7e00;
+}
+
+.status-inactive {
+  background-color: #e60000;
+}
+
+.mat-paginator {
+  background-color: #fff;
+}
+
+.mat-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.mat-menu-item mat-icon {
+  margin-right: 8px;
+}

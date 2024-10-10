@@ -1,6 +1,5 @@
 import { Component, ElementRef, HostListener, Input } from '@angular/core';
-import { ApexAxisChartSeries } from 'ng-apexcharts';
-import { sidebarData } from 'src/app/sampleData';
+import { sidebarData} from 'src/app/sampleData';
 
 @Component({
   selector: 'app-sidenav',
