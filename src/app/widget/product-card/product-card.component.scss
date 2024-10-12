@@ -115,7 +115,7 @@
 
 .product-name {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limits the text to 2 lines */
+  -webkit-line-clamp: 2; /* Limits the text to 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

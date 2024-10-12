@@ -16,6 +16,10 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChartPanelComponent } from './pages/chart-panel/chart-panel.component';
 import { ProductCardComponent } from './widget/product-card/product-card.component';
+import { ProductsPageComponent } from './pages/products-page/products-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { ProductCardComponent } from './widget/product-card/product-card.compone
     LinechartComponent,
     DashboardComponent,
     ChartPanelComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,11 @@ import { ProductCardComponent } from './widget/product-card/product-card.compone
     MatRadioModule,
     MatIconModule,
     BrowserAnimationsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    HttpClientModule,
+    MatCheckboxModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { productDummydata } from './sampleData';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { productDummydata } from './sampleData';
 export class AppComponent implements OnInit ,OnChanges{
   title = 'dashbaord';
   sidebarData:any;
-  products = productDummydata
 
   constructor(){
 
