@@ -19,15 +19,17 @@ export class ProductsPageComponent implements OnInit{
   };
 
   currentSelectedProduct:string ='';
-
+  offset = 1;
+  limit= 100;
   products:any[] =[]
   constructor(private service: ProductService){}
 
 
   ngOnInit(): void {
-   this.service.getProductDataByCategory('shoes').subscribe(res=>{
+   this.service.getProductDataByCategory('shoes',this.limit,this.offset).subscribe(async res=>{
       this.currentSelectedProduct = 'Shoes'
-    this.products = res
+      const validProducts = await this.filterProductsWithValidImages(res);
+        this.products = validProducts;
    })
   }
 
@@ -43,7 +45,7 @@ export class ProductsPageComponent implements OnInit{
     })
     if (this.categories[category].state){
         this.currentSelectedProduct = this.categories[category].name;
-      this.service.getProductDataByCategory(this.categories[category].name).subscribe(async (res)=>{
+      this.service.getProductDataByCategory(this.categories[category].name,this.limit,this.offset).subscribe(async (res)=>{
         const validProducts = await this.filterProductsWithValidImages(res);
         this.products = validProducts;
         console.log(this.products);

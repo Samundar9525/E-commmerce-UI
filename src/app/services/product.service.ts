@@ -9,7 +9,7 @@ export class ProductService {
   api = 'http://localhost:3000/products/'
   constructor(private http:HttpClient) { }
 
-  getProductDataByCategory(category: string): Observable<any> {
-    return this.http.get<any>(`${this.api}/${category}`);
+  getProductDataByCategory(category: string,limit?:number,offset?:number): Observable<any> {
+    return this.http.get<any>(`${this.api}/${category}?limit=${limit}&offset=${offset}`);
   }
 }
