@@ -103,3 +103,73 @@
     width: 100%;
   }
 }
+
+/* Hide sidebar when collapsed */
+.left-section.collapsed {
+  display: none;
+}
+
+/* Add some styles for the toggle button */
+.toggle-button {
+  display: none;
+  margin-left: auto;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+
+/* Tablet: Adjust for medium screen sizes (768px and up) */
+@media (max-width: 768px) {
+  .left-section {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Mobile: Adjust for small screen sizes (480px and down) */
+@media (max-width: 480px) {
+  .toggle-button {
+    display: block;
+  }
+
+  /* Ensure the sidebar collapses in mobile view */
+  .left-section {
+    width: 100%;
+    padding: 15px;
+  }
+  .header{
+    flex-direction: column;
+  }
+  .left-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .left-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .left-section .filter-group h3 {
+    font-size: 1rem;
+  }
+
+  /* Make the ul display in two columns on mobile */
+  .left-section .filter-group ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+    gap: 10px; /* Add spacing between the columns */
+  }
+
+  .left-section .filter-group li {
+    margin-bottom: 8px;
+  }
+
+  .left-section .filter-group input[type="range"] {
+    width: 100%;
+  }
+}

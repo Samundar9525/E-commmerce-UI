@@ -1,13 +1,16 @@
 <div class="main-container">
-  <!-- Header Section -->
   <header class="header">
     <h1>Product ({{currentSelectedProduct | titlecase}})</h1>
     <input type="text" placeholder="Search products..." class="search-bar">
+
+    <!-- Add toggle button for mobile view -->
+    <button class="toggle-button" (click)="toggleSidebar()">
+      {{ isSidebarVisible ? 'Hide Filters' : 'Show Filters' }}
+    </button>
   </header>
 
   <div class="content">
-    <!-- Left Section for Filters -->
-    <aside class="left-section">
+    <aside class="left-section" [class.collapsed]="!isSidebarVisible">
       <h2>Filter Products</h2>
       <div class="filter-group">
         <h3>Category</h3>
@@ -26,10 +29,10 @@
       </div>
     </aside>
 
-    <!-- Main Product Cards Section -->
     <section class="right-section">
       <div class="card-container">
-        <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+        <app-product-card *ngFor="let product of products" [product]="product" (scrollDirection)="scrollHandler($event)">
+        </app-product-card>
       </div>
     </section>
   </div>

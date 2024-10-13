@@ -1,16 +1,39 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss']
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements AfterViewInit {
   @Input() product: any;
+  @Output() scrollDirection = new EventEmitter<string>();
+  lastPosition: number = 0;
 
   // addToCart() {
   //   console.log(`${this.productName} added to cart.`);
   // }
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentPosition = entry.boundingClientRect.top;
+
+          if (currentPosition < this.lastPosition) {
+            this.scrollDirection.emit('up');
+          } else if (currentPosition > this.lastPosition) {
+            this.scrollDirection.emit('down');
+          }
+          this.lastPosition = currentPosition;
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(this.el.nativeElement);
+  }
 
   getStars(rating: number): string[] {
     const stars = [];
