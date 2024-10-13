@@ -9,3 +9,9 @@
 |---------------------------------------------------|--------------------------------------------|
 ![image](https://github.com/user-attachments/assets/ae911a08-c389-4af4-8852-8c90b6b971f1) | ![{EA7DA7D8-320D-44BC-B5F9-295C6D30F230}](https://github.com/user-attachments/assets/ab0dd9e3-d9ee-4097-b1bd-6707c8e1ab68)
 
+
+# Seller page
+|  Desktop View   |  popup   |
+|---------------------------------------------------|--------------------------------------------|
+![image](https://github.com/user-attachments/assets/5f9e6713-14ba-453e-a9f8-7c28537246e3) | ![{D73C2E99-CD72-4DC9-ACB6-B6A669C2F9DE}](https://github.com/user-attachments/assets/766c6b0f-735d-4748-a47c-436d96419170)
+
