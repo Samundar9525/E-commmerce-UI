@@ -26,6 +26,11 @@ import { TablesComponent } from './widget/tables/tables.component';
 import { ModelsComponent } from './widget/models/models.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductCardComponent } from './widget/product-card/product-card.component';
+import { ProductsPageComponent } from './pages/products-page/products-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ChartPanelComponent,
     SellerDashboardComponent,
     TablesComponent,
-    ModelsComponent
+    ModelsComponent,
+    ProductCardComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +64,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatTooltipModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule,
+    MatCheckboxModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
