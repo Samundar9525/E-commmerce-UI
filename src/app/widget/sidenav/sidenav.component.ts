@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { sidebarData} from 'src/app/sampleData';
 
 @Component({
@@ -15,10 +16,14 @@ export class SidenavComponent {
   sidebarData = sidebarData
   @Input() menuData: any[] = [];
   // sample menu items kee the routing event here
-
-  constructor(private eRef: ElementRef) { }
+  dashboardType:any ='';
+  constructor(private eRef: ElementRef,private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
+    if(this.route.snapshot.paramMap.get('id')){
+      this.dashboardType = this.route.snapshot.paramMap.get('id');
+    }
   }
 
   toggleSidebar() {

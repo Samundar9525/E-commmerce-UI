@@ -1,0 +1,18 @@
+<div class="card">
+  <img [src]="product.image || 'https://st.depositphotos.com/1106005/3146/i/380/depositphotos_31468817-stock-photo-coming-soon-sign.jpg'"
+       (error)="onImageError($event)"
+       [alt]="product.name">
+  <h2 class="product-name">{{ product.name }}</h2>
+  <p class="price">
+    <strong>{{ product.discount_price }}</strong>
+    <span class="old-price">(was {{ product.actual_price }})</span>
+  </p>
+  <div class="ratings">
+    <ng-container *ngFor="let star of getStars(product.ratings)">
+      <i [class]="star"></i>
+    </ng-container>
+    <span class="rating-count"> (<strong>{{product.ratings}}</strong>)</span>
+    <span class="review-count"> ({{ product.no_of_ratings }} reviews)</span>
+  </div>
+  <a [href]="product.link" target="_blank" class="buy-now">Buy Now</a>
+</div>

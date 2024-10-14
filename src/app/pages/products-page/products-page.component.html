@@ -1,0 +1,39 @@
+<div class="main-container">
+  <header class="header">
+    <h1>Product ({{currentSelectedProduct | titlecase}})</h1>
+    <input type="text" placeholder="Search products..." class="search-bar">
+
+    <!-- Add toggle button for mobile view -->
+    <button class="toggle-button" (click)="toggleSidebar()">
+      {{ isSidebarVisible ? 'Hide Filters' : 'Show Filters' }}
+    </button>
+  </header>
+
+  <div class="content">
+    <aside class="left-section" [class.collapsed]="!isSidebarVisible">
+      <h2>Filter Products</h2>
+      <div class="filter-group">
+        <h3>Category</h3>
+        <ul>
+          <li *ngFor="let key of getKeys()">
+            <mat-checkbox [(ngModel)]="categories[key].state" (change)="onCategoryChange(key)">
+              {{ categories[key].name | titlecase }}
+            </mat-checkbox>
+          </li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <h3>Price Range</h3>
+        <input type="range" min="0" max="5000" step="50">
+      </div>
+    </aside>
+
+    <section class="right-section">
+      <div class="card-container">
+        <app-product-card *ngFor="let product of products" [product]="product" (scrollDirection)="scrollHandler($event)">
+        </app-product-card>
+      </div>
+    </section>
+  </div>
+</div>

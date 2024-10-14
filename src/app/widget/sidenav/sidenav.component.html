@@ -23,9 +23,11 @@
   </div>
 
   <section class="home-section" [ngClass]="{ 'sidebar-closed': isSidebarClosed }">
-    <div class="home-content">
-      <!-- <app-dashboard></app-dashboard> -->
-       <app-seller-dashboard></app-seller-dashboard>
+    <div class="home-content" *ngIf="dashboardType == 'admin'">
+      <app-dashboard></app-dashboard>
+  </div>
+  <div class="home-content" *ngIf="dashboardType == 'seller'">
+    <app-seller-dashboard></app-seller-dashboard>
   </div>
   </section>
 </div>
