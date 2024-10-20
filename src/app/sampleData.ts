@@ -406,3 +406,6 @@ export const productDummydata = [
     actual_price: "₹1,099"
   }
 ]
+
+
+export const dropDownMenu = ['Shoes','Footwear','Shirts','Jeans','Televisions']

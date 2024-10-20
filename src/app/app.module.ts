@@ -31,6 +31,8 @@ import { ProductsPageComponent } from './pages/products-page/products-page.compo
 import { HttpClientModule } from '@angular/common/http';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 @NgModule({
   declarations: [
@@ -67,8 +69,8 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     HttpClientModule,
     MatCheckboxModule,
-    FormsModule
-
+    FormsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

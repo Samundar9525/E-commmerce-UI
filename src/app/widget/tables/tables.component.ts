@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,6 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class TablesComponent {
   @Input() tableColumns: any[] = [];
   @Input() tableData: any[] = [];
+  @Output() rowActionEvent = new EventEmitter();
 
   displayedColumns: string[] = [];
   dataSource: MatTableDataSource<any> = new MatTableDataSource();
@@ -33,12 +34,18 @@ export class TablesComponent {
   }
 
   onEdit(element: any) {
-    // Handle edit action here
-    console.log('Edit clicked for', element);
+    let obj = {
+      action:'edit',
+      rowdata:element
+    }
+    this.rowActionEvent.emit(obj);
   }
 
   onDelete(element: any) {
-    // Handle delete action here
-    console.log('Delete clicked for', element);
+    let obj = {
+      action:'delete',
+      rowdata:element
+    }
+    this.rowActionEvent.emit(obj);
   }
 }
